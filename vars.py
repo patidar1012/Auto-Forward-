@@ -17,5 +17,5 @@ BOT_TOKEN = "7016509767:AAHGyELmvA9D6uCz2yPsI5sL4gr7pooU1lI"
 LOG_CHANNEL = int(environ.get("LOG_CHANNEL", "-1002137528664"))
 PORT = int(environ.get("PORT", "8080"))
 ADMINS = [int(admin) if id_pattern.search(admin) else admin for admin in environ.get('ADMINS', '6302921275').split()]
-TARGET_DB = int(environ.get("TARGET_DB", -1002233567861))
+TARGET_DB = int(environ.get("TARGET_DB", "-1002137528664"))
 UPSTREAM_REPO = environ.get("UPSTREAM_REPO", "https://github.com/Joelkb/File-Forward-Bot")
