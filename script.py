@@ -9,11 +9,11 @@ class scripts(object):
 
     START_TXT = """
 <b>Hᴇʟʟᴏ {},
-Mʏ Nᴀᴍᴇ Is <a href=https://t.me/{}>{}</a>, I'm Just A Private Forward Bot Made By <a href='t.me/creatorbeatz'>Jᴏᴇʟ ᠰ TɢX</a>.</b>"""
+Mʏ Nᴀᴍᴇ Is <a href=https://t.me/{}>{}</a>, I'm Just A Private Forward Bot Made By <a href='t.me/Spider_Man_02'>Naman</a>.</b>"""
 
     ABOUT_TXT = """
 <b>✯ Mʏ Nᴀᴍᴇ: {}
-✯ Cʀᴇᴀᴛᴏʀ: <a href='https://t.me/creatorbeatz'>Jᴏᴇʟ ᠰ TɢX</a>
+✯ Cʀᴇᴀᴛᴏʀ: <a href='https://t.me/Spider_Man_02'>Jᴏᴇʟ ᠰ TɢX</a>
 ✯ Lɪʙʀᴀʀʏ: <a href='https://docs.pyrogram.org/'>Pʏʀᴏɢʀᴀᴍ</a>
 ✯ Lᴀɴɢᴜᴀɢᴇ: <a href='https://www.python.org/download/releases/3.0/'>Pʏᴛʜᴏɴ 3</a>
 ✯ Bᴜɪʟᴅ Sᴛᴀᴛᴜs: v1.0.1 [ Sᴛᴀʙʟᴇ ]</b>"""
@@ -21,9 +21,9 @@ Mʏ Nᴀᴍᴇ Is <a href=https://t.me/{}>{}</a>, I'm Just A Private Forward Bot
     SOURCE_TXT = """
 <b>ɴᴏᴛᴇ:
 - ᴛʜɪꜱ ʙᴏᴛ ɪꜱ ᴀɴ ᴏᴘᴇɴ ꜱᴏᴜʀᴄᴇ ᴘʀᴏᴊᴇᴄᴛ.
-- ꜱᴏᴜʀᴄᴇ - <a href="https://github.com/Joelkb/File-Forward-Bot">ʜᴇʀᴇ</a>
+- ꜱᴏᴜʀᴄᴇ - <a href="https://t.me/+tFFkudsBuY1kNjU1">ʜᴇʀᴇ</a>
 Dᴇᴠᴇʟᴏᴘᴇʀ:
-- <a href="https://t.me/creatorbeatz">Jᴏᴇʟ ᠰ TɢX</a></b>"""
+- <a href="https://t.me/Spider_Man_02">Naman</a></b>"""
 
     HELP_TXT = """
 <b>Here are all my commands:
