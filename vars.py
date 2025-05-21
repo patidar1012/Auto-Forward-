@@ -18,4 +18,4 @@ LOG_CHANNEL = int(environ.get("LOG_CHANNEL", "-1002137528664"))
 PORT = int(environ.get("PORT", "8080"))
 ADMINS = [int(admin) if id_pattern.search(admin) else admin for admin in environ.get('ADMINS', '6302921275').split()]
 TARGET_DB = int(environ.get("TARGET_DB", "-1002239734551"))
-UPSTREAM_REPO = environ.get("UPSTREAM_REPO", "https://github.com/Joelkb/File-Forward-Bot")
+UPSTREAM_REPO = environ.get("UPSTREAM_REPO", "https://github.com/MandaliWala/File-Forward-Bottermux")
