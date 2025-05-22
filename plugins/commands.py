@@ -8,6 +8,7 @@ from vars import ADMINS, TARGET_DB
 import asyncio
 import re
 import logging
+import time
 logger = logging.getLogger(__name__)
 logger.setLevel(logging.INFO)
 lock = asyncio.Lock()
