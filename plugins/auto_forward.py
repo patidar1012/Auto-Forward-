@@ -15,5 +15,5 @@ async def auto_forward(bot, message):
             chat_id=int(TARGET_DB),
             caption=file_caption
         )
-    logger.info("Forwarded", message, "from", FROM_DB, "to", TARGET_DB)
+    logger.info("Forwarded", message.caption, "from", FROM_DB, "to", TARGET_DB)
     await asyncio.sleep(1)
