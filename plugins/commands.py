@@ -12,7 +12,7 @@ logger = logging.getLogger(__name__)
 logger.setLevel(logging.INFO)
 lock = asyncio.Lock()
 
-@Client.on_message(filters.command("ping", CMD))
+@Client.on_message(filters.command("ping"))
 async def ping(_, message):
     start_t = time.time()
     rm = await message.reply_text("...")
