@@ -14,7 +14,7 @@ forwarded = 0
 @Client.on_message(filters.chat(FROM_DB) & media_filter)
 async def auto_forward(bot, message):
     global forwarded
-    file_caption = re.sub(r"(⚡️Join:- \[@BlackDeath_0\]‌‌)|(JOIN 💎 : @M2LINKS)|@\w+|(_|\- |\.|\+|\[|\]\ )", " ", str(message.caption))
+    file_caption = re.sub(r"(⚡️Join:- \[@BlackDeath_0\]‌‌)|(JOIN 💎 : @M2LINKS)|@\w+|(_|\- |\.|\+|\[|\]| \[| \]\ )", " ", str(message.caption))
     async with lock:
         try:
             await message.copy(
