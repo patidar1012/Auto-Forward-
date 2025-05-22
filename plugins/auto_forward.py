@@ -5,6 +5,6 @@ media_filter = filters.document | filters.video | filters.audio
 
 @Client.on_message(filters.chat(FROM_DB) & media_filter)
 async def auto_forward(bot, message):
-    await msg.copy(
+    await message.copy(
         chat_id=int(TARGET_DB)
     )

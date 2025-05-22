@@ -13,7 +13,7 @@ Mʏ Nᴀᴍᴇ Is <a href=https://t.me/{}>{}</a>, I'm Just A Private Forward Bot
 
     ABOUT_TXT = """
 <b>✯ Mʏ Nᴀᴍᴇ: {}
-✯ Cʀᴇᴀᴛᴏʀ: <a href='https://t.me/Spider_Man_02'>Jᴏᴇʟ ᠰ TɢX</a>
+✯ Cʀᴇᴀᴛᴏʀ: <a href='https://t.me/Spider_Man_02'>𝑷𝒆𝒕𝒆𝒓 𝑷𝒂𝒓𝒌𝒆𝒓 🕸️</a>
 ✯ Lɪʙʀᴀʀʏ: <a href='https://docs.pyrogram.org/'>Pʏʀᴏɢʀᴀᴍ</a>
 ✯ Lᴀɴɢᴜᴀɢᴇ: <a href='https://www.python.org/download/releases/3.0/'>Pʏᴛʜᴏɴ 3</a>
 ✯ Bᴜɪʟᴅ Sᴛᴀᴛᴜs: v1.0.1 [ Sᴛᴀʙʟᴇ ]</b>"""
