@@ -11,4 +11,4 @@ async def auto_forward(bot, message):
             chat_id=int(TARGET_DB),
             caption=file_caption
         )
-        await asyncio.sleep(1)
+    await asyncio.sleep(1)
