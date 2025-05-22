@@ -10,7 +10,7 @@ media_filter = filters.document | filters.video
 
 @Client.on_message(filters.chat(FROM_DB) & media_filter)
 async def auto_forward(bot, message):
-    file_caption = re.sub(r"@\w+|(_|\- |\.|\+|\[|\]\ )", " ", str(message.caption))
+    file_caption = re.sub(r"(JOIN 💎 : @M2LINKS)|@\w+|(_|\- |\.|\+|\[|\]\ )", " ", str(message.caption))
     await message.copy(
             chat_id=int(TARGET_DB),
             caption=file_caption
