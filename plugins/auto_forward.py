@@ -1,5 +1,6 @@
 import asyncio, re
 from pyrogram import Client, filters
+from pyrogram.errors import FloodWait
 from vars import ADMINS, FROM_DB, TARGET_DB
 
 import logging
@@ -11,11 +12,21 @@ lock = asyncio.Lock()
 
 @Client.on_message(filters.chat(FROM_DB) & media_filter)
 async def auto_forward(bot, message):
+    forwarded = 0
+    file_caption = re.sub(r"(JOIN 💎 : @M2LINKS)|@\w+|(_|\- |\.|\+|\[|\]\ )", " ", str(message.caption))
     async with lock:
-        file_caption = re.sub(r"(JOIN 💎 : @M2LINKS)|@\w+|(_|\- |\.|\+|\[|\]\ )", " ", str(message.caption))
-        await message.copy(
-                chat_id=int(TARGET_DB),
-                caption=file_caption
-            )
-        logger.info(f"Forwarded {message.caption} from {FROM_DB} to {TARGET_DB}")
-        await asyncio.sleep(1)
+        try:
+            await message.copy(
+                    chat_id=int(TARGET_DB),
+                    caption=file_caption
+                )
+            forwarded += 1
+            logger.info(f"Forwarded {message.caption} from {FROM_DB} to {TARGET_DB}")
+            await asyncio.sleep(1)
+            if forwarded % 20 == 0:
+                logger.info("⏸️ 20 files sent! Taking a break of 30 seconds...")
+                await asyncio.sleep(30)
+        except FloodWait as e:
+            logger.warning(f"Got FloodWait.\n\nWaiting for {e.value} seconds.")
+            await asyncio.sleep(e.value + 5)
+            await auto_forward(bot, message)
