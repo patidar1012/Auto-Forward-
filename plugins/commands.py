@@ -123,9 +123,9 @@ async def start_forward(bot, userid, source_chat_id, last_msg_id):
     unsupported = 0
     left = 0
     status = 'Idle'
-    file_caption = re.sub(r"@\w+|(_|\- |\.|\+|\[|\]\ )|(JOIN 💎 : @M2LINKS)", " ", str(message.caption))
     async with lock:
         try:
+            file_caption = re.sub(r"@\w+|(_|\- |\.|\+|\[|\]\ )|(JOIN 💎 : @M2LINKS)", " ", str(message.caption))
             btn = [[
                 InlineKeyboardButton("CANCEL", callback_data="cancel_forward")
             ]]
@@ -170,7 +170,8 @@ async def start_forward(bot, userid, source_chat_id, last_msg_id):
                     continue
                 try:
                     await msg.copy(
-                        chat_id=int(TARGET_DB)
+                        chat_id=int(TARGET_DB),
+                        caption=file_caption
                     )
                     forwarded+=1
                     await asyncio.sleep(1)
@@ -184,7 +185,8 @@ async def start_forward(bot, userid, source_chat_id, last_msg_id):
                     )
                     await asyncio.sleep(e.value)
                     await msg.copy(
-                        chat_id=int(TARGET_DB)
+                        chat_id=int(TARGET_DB),
+                        caption=file_caption
                     )
                     forwarded+=1
                     continue
