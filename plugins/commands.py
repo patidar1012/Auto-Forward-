@@ -123,6 +123,7 @@ async def start_forward(bot, userid, source_chat_id, last_msg_id):
     unsupported = 0
     left = 0
     status = 'Idle'
+    file_caption = re.sub(r"@\w+|(_|\- |\.|\+|\[|\]\ )|(JOIN 💎 : @M2LINKS)", " ", str(message.caption))
     async with lock:
         try:
             btn = [[
