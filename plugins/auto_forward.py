@@ -1,7 +1,7 @@
 import asyncio, re
 from pyrogram import Client, filters
 from pyrogram.errors import FloodWait
-from vars import ADMINS, FROM_DB, TARGET_DB
+from vars import FROM_DB, TARGET_DB
 
 import logging
 logger = logging.getLogger(__name__)
