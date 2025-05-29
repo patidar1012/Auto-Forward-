@@ -23,7 +23,7 @@ async def auto_forward(bot, message):
                     caption=file_caption
                 )
             forwarded += 1
-            logger.info(f"Forwarded {message.caption} from {FROM_DB} to {TARGET_DB}\n{forwarded}files")
+            logger.info(f"Forwarded {message.caption} from {FROM_DB} to {TARGET_DB}\nforwarded {forwarded} files")
             await asyncio.sleep(1)
             if forwarded % 20 == 0:
                 logger.info("⏸️ 20 files sent! Taking a break of 30 seconds...")
@@ -36,7 +36,7 @@ async def auto_forward(bot, message):
                     caption=file_caption
                 )
             forwarded += 1
-            logger.info(f"Forwarded {message.caption} from {FROM_DB} to {TARGET_DB}\n{forwarded}files")
+            logger.info(f"Forwarded {message.caption} from {FROM_DB} to {TARGET_DB}\nforwarded {forwarded} files")
             await asyncio.sleep(1)
             if forwarded % 20 == 0:
                 logger.info("⏸️ 20 files sent! Taking a break of 30 seconds...")
