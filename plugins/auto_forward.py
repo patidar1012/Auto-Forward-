@@ -15,7 +15,9 @@ forwarded = 0
 async def auto_forward(bot, message):
     global forwarded
     file_caption = re.sub(r"(🔸 Upload By \[@BlackDeath_0\])|(❤️‍🔥 Join ~ \[@Moonknight_media\])|(@Ac_Linkzz)|(⚡️Join:- \[@BlackDeath_0\]‌‌)|(EonMovies)|(JOIN 💎 : @M2LINKS)|@\w+|(_|\- |\.|\+)", " ", str(message.caption))
-    file_caption = f"{file_caption}\n❤️JOIN : @MovieTimesTV"
+    file_caption = f"{file_caption}➖➖➖➖➖➖➖➖➖➖
+ Powered By: @MovieTimesTV
+➖➖➖➖➖➖➖➖➖➖"
     async with lock:
         try:
             await message.copy(
