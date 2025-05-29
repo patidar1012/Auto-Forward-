@@ -31,4 +31,13 @@ async def auto_forward(bot, message):
         except FloodWait as e:
             logger.warning(f"Got FloodWait.\n\nWaiting for {e.value} seconds.")
             await asyncio.sleep(e.value + 5)
-            await auto_forward(bot, message)
+            await message.copy(
+                    chat_id=int(TARGET_DB),
+                    caption=file_caption
+                )
+            forwarded += 1
+            logger.info(f"Forwarded {message.caption} from {FROM_DB} to {TARGET_DB}\n{forwarded}files")
+            await asyncio.sleep(1)
+            if forwarded % 20 == 0:
+                logger.info("⏸️ 20 files sent! Taking a break of 30 seconds...")
+                await asyncio.sleep(30)
