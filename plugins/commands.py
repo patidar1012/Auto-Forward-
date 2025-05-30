@@ -123,7 +123,9 @@ async def start_forward(bot, userid, source_chat_id, last_msg_id):
     unsupported = 0
     left = 0
     status = 'Idle'
-    file_caption = f"{file_caption}❤️JOIN : @MovieTimesTV"
+    file_caption = f"""{file_caption}\n➖➖➖➖➖➖➖➖➖➖
+ <b>Powered By:</b> <a href='https://t.me/MovieTimesTV'><b>Mᴏᴠɪᴇ Tɪᴍᴇs™</b></a>
+➖➖➖➖➖➖➖➖➖➖"""
     async with lock:
         try:
             btn = [[
