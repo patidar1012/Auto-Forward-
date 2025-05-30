@@ -14,8 +14,7 @@ forwarded = 0
 @Client.on_message(filters.chat(FROM_DB) & media_filter)
 async def auto_forward(bot, message):
     global forwarded
-    file_caption = re.sub(r"(🔸 Upload By \[@BlackDeath_0\])|(❤️‍🔥 Join ~ \[@Moonknight_media\])|(@Ac_Linkzz)|(⚡️Join:- \[@BlackDeath_0\]‌‌)|(EonMovies)|(JOIN 💎 : @M2LINKS)", "", str(message.caption))
-    file_caption = re.sub(r"@\w+|(_|\- |\.|\+)", " ", str(file_caption))
+    file_caption = re.sub(r"(🔸 Upload By \[@BlackDeath_0\])|(❤️‍🔥 Join ~ \[@Moonknight_media\])|(@Ac_Linkzz)|(⚡️Join:- \[@BlackDeath_0\]‌‌)|(EonMovies)|(JOIN 💎 : @M2LINKS)|@\w+|(_|\- |\.|\+)", " ", str(message.caption))
     file_caption = f"""{file_caption}\n➖➖➖➖➖➖➖➖➖➖
  <b>Powered By:</b> <a href='https://t.me/MovieTimesTV'><b>Mᴏᴠɪᴇ Tɪᴍᴇs™</b></a>
 ➖➖➖➖➖➖➖➖➖➖"""
