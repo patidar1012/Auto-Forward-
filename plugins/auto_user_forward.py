@@ -13,9 +13,8 @@ class CLIENT:
      self.api_hash = API_HASH
 
   def user_session(self):
-      return Client(API_ID, API_HASH, session_string=USER_SESSION)
-  
-Client.connect()
+      user = Client(API_ID, API_HASH, session_string=USER_SESSION)
+      user.connect()
 
 media_filter = filters.document | filters.video
 lock = asyncio.Lock()
