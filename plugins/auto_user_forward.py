@@ -7,20 +7,15 @@ import logging
 logger = logging.getLogger(__name__)
 logger.setLevel(logging.INFO)
 
-class CLIENT: 
-  def __init__(self):
-     self.api_id = API_ID
-     self.api_hash = API_HASH
-
-  def user_session(self):
-      return Client(self.api_id, self.api_hash, session_string=USER_SESSION)
+user = Client(API_ID, API_HASH, session_string=USER_SESSION)
+user.connect()
 
 media_filter = filters.document | filters.video
 lock = asyncio.Lock()
 forwarded = 0
 
 @Client.on_message(filters.chat(USER_FROM_DB) & media_filter)
-async def auto_forward(bot, message):
+async def auto_forward(client, message):
     global forwarded
     file_caption = re.sub(r"(❤️‍🔥 Join ~ [ @Moonknight_media ])|(\n🔸 Upload By \[@BlackDeath_0\])|(\n❤️‍🔥 Join ~ \[@Moonknight_media\])|(@Ac_Linkzz)|(\n⚡️Join:- \[@BlackDeath_0\]‌‌)|(EonMovies)|(\nJOIN 💎 : @M2LINKS)|@\w+|(_|\- |\.|\+)", " ", str(message.caption))
     file_caption = f"""{file_caption}\n➖➖➖➖➖➖➖➖➖➖
