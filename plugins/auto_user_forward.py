@@ -12,9 +12,9 @@ class CLIENT:
      self.api_id = API_ID
      self.api_hash = API_HASH
 
-  def user_session(self):
-      user = Client(API_ID, API_HASH, session_string=USER_SESSION)
-      user.connect()
+  async def user_session(self):
+    user = Client(API_ID, API_HASH, session_string=USER_SESSION)
+    await user.connect()
 
 media_filter = filters.document | filters.video
 lock = asyncio.Lock()
