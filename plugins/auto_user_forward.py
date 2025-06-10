@@ -9,8 +9,8 @@ logger.setLevel(logging.INFO)
 
 class CLIENT: 
   def __init__(self):
-     self.api_id = API_ID
-     self.api_hash = API_HASH
+    self.api_id = API_ID
+    self.api_hash = API_HASH
 
   async def user_session(self):
     user = Client(API_ID, API_HASH, session_string=USER_SESSION)
