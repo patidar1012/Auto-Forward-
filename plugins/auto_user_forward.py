@@ -20,7 +20,7 @@ media_filter = filters.document | filters.video
 lock = asyncio.Lock()
 forwarded = 0
 
-@Client.on_message(filters.chat(USER_FROM_DB) & media_filter)
+@user.on_message(filters.chat(USER_FROM_DB) & media_filter)
 async def auto_forward(client, message):
     global forwarded
     file_caption = re.sub(r"(❤️‍🔥 Join ~ [ @Moonknight_media ])|(\n🔸 Upload By \[@BlackDeath_0\])|(\n❤️‍🔥 Join ~ \[@Moonknight_media\])|(@Ac_Linkzz)|(\n⚡️Join:- \[@BlackDeath_0\]‌‌)|(EonMovies)|(\nJOIN 💎 : @M2LINKS)|@\w+|(_|\- |\.|\+)", " ", str(message.caption))
