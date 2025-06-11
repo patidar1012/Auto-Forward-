@@ -13,7 +13,7 @@ class CLIENT(Client):
     self.api_hash = API_HASH
 
   async def user_session(self):
-    user = Client(API_ID, API_HASH, session_string=USER_SESSION)
+    user = Client("user_session", API_ID, API_HASH, session_string=USER_SESSION)
     await user.connect()
 
 media_filter = filters.document | filters.video
