@@ -13,12 +13,6 @@ User = Client(
     api_hash=API_HASH,
     session_string=USER_SESSION)
 
-async def main():
-    await User.connect()
-    logger.info("User session started successfully!")
-    me = await User.get_me()
-    logger.info(f"Logged in as {me.first_name} (ID: {me.id})")
-    
 media_filter = filters.document | filters.video
 lock = asyncio.Lock()
 forwarded = 0
@@ -55,3 +49,9 @@ async def auto_forward(client, message):
             if forwarded % 20 == 0:
                 logger.info("⏸️ 20 files sent! Taking a break of 30 seconds...")
                 await asyncio.sleep(30)
+
+async def main():
+    await User.connect()
+    logger.info("User session started successfully!")
+    me = await User.get_me()
+    logger.info(f"Logged in as {me.first_name} (ID: {me.id})")
