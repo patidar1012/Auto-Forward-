@@ -51,21 +51,7 @@ async def auto_forward(client, message):
                 await asyncio.sleep(30)
 
 async def main():
-    await User.start()
+    await User.connect()
     logger.info("User session started successfully!")
     me = await User.get_me()
     logger.info(f"Logged in as {me.first_name} (ID: {me.id})")
-    
-    # Keep the client running
-    await asyncio.Event().wait()
-
-if __name__ == "__main__":
-    try:
-        asyncio.run(main())
-    except KeyboardInterrupt:
-        logger.info("User session stopped by user")
-    except Exception as e:
-        logger.error(f"Fatal error: {e}")
-    finally:
-        asyncio.run(User.stop())
-        logger.info("User session stopped properly")
