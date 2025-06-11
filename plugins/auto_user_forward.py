@@ -7,7 +7,7 @@ import logging
 logger = logging.getLogger(__name__)
 logger.setLevel(logging.INFO)
 
-class CLIENT: 
+class CLIENT(Client): 
   def __init__(self):
     self.api_id = API_ID
     self.api_hash = API_HASH
