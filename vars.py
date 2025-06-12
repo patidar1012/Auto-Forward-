@@ -23,6 +23,3 @@ UPSTREAM_REPO = environ.get("UPSTREAM_REPO", "https://github.com/MandaliWala/Fil
 #Auto Forward vars
 FROM_DB = [int(channel_id) for channel_id in environ.get('FROM_DB', '-1002116767957 -1002464939396 -1002465338354 -1002753463498 -1001971879597 -1002510094945 -1002056617893 -1002369988753').split() if re.match(r'^-?\d+$', channel_id)]
 TO_DB = int(environ.get("TO_DB", "-1002189644835"))
-#User Auto Forward vars
-USER_FROM_DB = [int(user_channel_id) for user_channel_id in environ.get('USER_FROM_DB', '-1002075429339').split() if re.match(r'^-?\d+$', user_channel_id)]
-USER_TO_DB = int(environ.get("USER_TO_DB", "-1002189644835"))
