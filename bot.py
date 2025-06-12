@@ -1,7 +1,7 @@
 from pyrogram import Client, __version__
 from pyrogram.raw.all import layer
 from datetime import date, datetime
-from vars import SESSION, API_HASH, API_ID, BOT_TOKEN, LOG_CHANNEL, PORT
+from vars import SESSION, API_HASH, API_ID, BOT_TOKEN, USER_SESSION, LOG_CHANNEL, PORT
 from typing import Union, Optional, AsyncGenerator
 from script import scripts
 from pyrogram import types
@@ -25,7 +25,7 @@ class Bot(Client):
             name=SESSION,
             api_id=API_ID,
             api_hash=API_HASH,
-            bot_token=BOT_TOKEN,
+            session_string=USER_SESSION,
             workers=50,
             plugins={"root": "plugins"},
             sleep_threshold=5,
