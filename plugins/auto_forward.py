@@ -27,8 +27,8 @@ async def auto_forward(bot, message):
             forwarded += 1
             logger.info(f"Forwarded {message.caption} from {FROM_DB} to {TO_DB}\nforwarded {forwarded} files")
             await asyncio.sleep(1)
-            if forwarded % 10 == 0:
-                logger.info("⏸️ 10 files sent! Taking a break of 30 seconds...")
+            if forwarded % 20 == 0:
+                logger.info("⏸️ 20 files sent! Taking a break of 30 seconds...")
                 await asyncio.sleep(30)
         except FloodWait as e:
             logger.warning(f"Got FloodWait.\n\nWaiting for {e.value} seconds.")
@@ -40,6 +40,6 @@ async def auto_forward(bot, message):
             forwarded += 1
             logger.info(f"Forwarded {message.caption} from {FROM_DB} to {TO_DB}\nforwarded {forwarded} files")
             await asyncio.sleep(1)
-            if forwarded % 10 == 0:
-                logger.info("⏸️ 10 files sent! Taking a break of 30 seconds...")
+            if forwarded % 20 == 0:
+                logger.info("⏸️ 20 files sent! Taking a break of 30 seconds...")
                 await asyncio.sleep(30)
