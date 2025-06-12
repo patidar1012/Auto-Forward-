@@ -21,7 +21,7 @@ ADMINS = [int(admin) if id_pattern.search(admin) else admin for admin in environ
 TARGET_DB = int(environ.get("TARGET_DB", "-1002155536121"))
 UPSTREAM_REPO = environ.get("UPSTREAM_REPO", "https://github.com/MandaliWala/File-Forward-Bottermux")
 #Auto Forward vars
-FROM_DB = [int(channel_id) for channel_id in environ.get('FROM_DB', '-1002056617893 -1002369988753').split() if re.match(r'^-?\d+$', channel_id)]
+FROM_DB = [int(channel_id) for channel_id in environ.get('FROM_DB', '-1001971879597 -1002510094945 -1002056617893 -1002369988753').split() if re.match(r'^-?\d+$', channel_id)]
 TO_DB = int(environ.get("TO_DB", "-1002189644835"))
 #User Auto Forward vars
 USER_FROM_DB = [int(user_channel_id) for user_channel_id in environ.get('USER_FROM_DB', '-1002075429339').split() if re.match(r'^-?\d+$', user_channel_id)]
