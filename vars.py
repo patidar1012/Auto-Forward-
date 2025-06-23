@@ -21,5 +21,5 @@ ADMINS = [int(admin) if id_pattern.search(admin) else admin for admin in environ
 TARGET_DB = int(environ.get("TARGET_DB", "-1002222465571"))
 UPSTREAM_REPO = environ.get("UPSTREAM_REPO", "https://github.com/patidar1012/Auto-Forward-.git")
 #Auto Forward vars
-FROM_DB = [int(channel_id) for channel_id in environ.get('FROM_DB', '-1002414255000 -1002660675955 -1002234633741 -1002884674953').split() if re.match(r'^-?\d+$', channel_id)]
+FROM_DB = [int(channel_id) for channel_id in environ.get('FROM_DB', '-1002414255000 -1002660675955 -1002234633741 -1002884674953 -1002564944280').split() if re.match(r'^-?\d+$', channel_id)]
 TO_DB = int(environ.get("TO_DB", "-1002222465571"))
