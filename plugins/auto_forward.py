@@ -16,7 +16,7 @@
 #     global forwarded
 #     file_caption = re.sub(r"(𝗧𝗛𝗘 𝗣𝗥𝗢𝗙𝗘𝗦𝗦𝗢𝗥 )|(𝙿𝚘𝚠𝚎𝚛e𝚍 𝙱𝚢 ➥  @Theprofessers)|(❤️‍🔥 Join ~ [ @Moonknight_media ])|(\n🔸 Upload By \[@BlackDeath_0\])|(\n❤️‍🔥 Join ~ \[@Moonknight_media\])|(@Ac_Linkzz)|(\n⚡️Join:- \[@BlackDeath_0\]‌‌)|(EonMovies)|(\nJOIN 💎 : @M2LINKS)|@\w+|(_|\- |\.|\+)", " ", str(message.caption))
 #     file_caption = f"""{file_caption}\n➖➖➖➖➖➖➖➖➖➖
-#  <b>Powered By:</b> <a href='https://t.me/MovieTimesTV'><b>Mᴏᴠɪᴇ Tɪᴍᴇs™</b></a>
+#  <b>Powered By:</b> <a href='https://t.me/Film_CityOfficial'><b>ꜰɪʟᴍ ᴄɪᴛʏ ᴏꜰꜰɪᴄɪᴀʟ</b></a>
 # ➖➖➖➖➖➖➖➖➖➖"""
 #     async with lock:
 #         try:
