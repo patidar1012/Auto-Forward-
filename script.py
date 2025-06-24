@@ -9,7 +9,7 @@ class scripts(object):
 
     START_TXT = """
 <b>Hᴇʟʟᴏ {},
-Mʏ Nᴀᴍᴇ Is <a href=https://t.me/{}>{}</a>, I'm Just A Private Forward Bot Made By <a href='t.me/Spider_Man_02'>Naman</a>.</b>"""
+Mʏ Nᴀᴍᴇ Is <a href=https://t.me/{}>{}</a>, I'm Just A Private Forward Bot Made By <a href='t.me/Arpitbotmovies'>Aʀᴘɪᴛ</a>.</b>"""
 
     ABOUT_TXT = """
 <b>✯ Mʏ Nᴀᴍᴇ: {}
